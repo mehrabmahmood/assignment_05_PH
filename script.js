@@ -1,4 +1,4 @@
-let balance = 98600;
+let balance = 85000;
 
 document.getElementById('balance').textContent = balance + " BDT";
 
