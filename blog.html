@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <script src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class="bg-gray-100">
+    
+    <nav class="bg-[#F9F7F3]  shadow-md sticky top-0 flex justify-between items-center py-4 px-6 backdrop-blur-sm z-50">
+        <button id="home" class="bg-[#B4F461] text-black font-bold px-4 py-2 rounded" onclick="window.location.href = 'index.html';">Home</button>
+
+        <div class="flex items-center">
+            <img src="./assets/logo.png" alt="Logo" class="h-10 mx-auto">
+            <h3 class="text-gray-700 font-bold">Donate Bangladesh</h3>
+        </div>
+        <div class="flex items-center">
+            <img src="./assets/coin.png" alt="Coin" class="h-6 mr-2">
+            <span id="balance" class="text-gray-700 font-bold">98600 BDT</span>
+        </div>
+    </nav>
+
+    <main>
+    
+     <div class="max-w-3xl mx-auto mt-10 p-6 pb-7 bg-white shadow-lg rounded-lg">
+        <div class="text-center mb-6">
+            <h1 class="text-2xl font-bold text-gray-800">Important FAQ</h1>
+            <!-- <img src="https://img.icons8.com/ios-filled/50/000000/question-mark.png" alt="FAQ Icon" class="mx-auto mt-2"> -->
+        </div>
+
+        <div>
+            <!-- Questions & Answer -->
+            <div class="mb-4 border-b">
+                <button class="w-full text-left font-semibold text-gray-700 py-4 focus:outline-none" onclick="toggleAnswer(this)">
+                    What is the Document Object Model (DOM)?
+                </button>
+                <div class="faq-answer hidden">
+                    <p class="text-gray-600 p-4">The Document Object Model (DOM) is a programming interface that represents a web page's structure as a tree, allowing dynamic manipulation of its content, structure, and style.</p>
+                </div>
+            </div>
+            <div class="mb-4 border-b">
+                <button class="w-full text-left font-semibold text-gray-700 py-4 focus:outline-none" onclick="toggleAnswer(this)">
+                    How do you select an element from the DOM?
+                </button>
+                <div class="faq-answer hidden">
+                    <p class="text-gray-600 p-4">
+                        To select an element from the DOM, you can use:
+                       <br> 1. document.querySelector('selector') for selecting the first matching element.
+                       <br> 2. document.getElementById('id') for selecting an element by its unique ID.
+                    </p>
+                </div>
+            </div>
+            <div class="mb-4 border-b">
+                <button class="w-full text-left font-semibold text-gray-700 py-4 focus:outline-none" onclick="toggleAnswer(this)">
+                    What is event delegation in the context of the DOM, and why is it useful?
+                </button>
+                <div class="faq-answer hidden">
+                    <p class="text-gray-600 p-4">
+                        Event delegation is a technique in the DOM where a single event listener is attached to a parent element to handle events on its child elements using event bubbling. It improves performance and simplifies code by reducing the number of event listeners.
+                    </p>
+                </div>
+            </div>
+            <div class="mb-4 border-b">
+                <button class="w-full text-left font-semibold text-gray-700 py-4 focus:outline-none" onclick="toggleAnswer(this)">
+                    How do you manipulate an element's attributes and styles using the DOM?
+                </button>
+                <div class="faq-answer hidden">
+                    <p class="text-gray-600 p-4">
+                        You can manipulate an element's attributes using setAttribute() or by directly modifying properties (e.g., element.id = "newId"). For styles, use element.style to modify CSS properties (e.g., element.style.color = "blue").
+                    </p>
+                </div>
+            </div>
+        </div>
+     </div>
+    </main>
+
+    
+
+    
+
+    
+    <footer class="bg-[#F9F7F3] pb-20 ">
+
+    </footer> 
+    <script>
+        function toggleAnswer(button) {
+            const answer = button.nextElementSibling;
+            answer.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
